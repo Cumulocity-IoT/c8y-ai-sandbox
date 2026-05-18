@@ -1,0 +1,35 @@
+{
+  "apiVersion": "2",
+  "name": "c8y-ai-sandbox",
+  "contextPath": "c8y-ai-sandbox",
+  "key": "c8y-ai-sandbox-application-key",
+  "version": "1.0.0",
+  "provider": {
+    "name": "Cumulocity GmbH"
+  },
+  "type": "MICROSERVICE",
+  "isolation": "PER_TENANT",
+  "scale": "NONE",
+  "requestedResources": {
+    "memory": "1024M",
+    "cpu": "1000m"
+  },
+  "description": "An example MCP application demonstrating AI Tools.",
+  "resources": {
+    "memory": "2048M",
+    "cpu": "2000m"
+  },
+  "roles": [],
+  "requiredRoles": [
+    "ROLE_INVENTORY_READ"
+  ],
+  "exposeMcpServers": [
+    {
+      "name": "c8y-ai-sandbox",
+      "description": "Sandbox environment for executing shell commands.",
+      "url": "/service/c8y-ai-sandbox/mcp",
+      "type": "http",
+      "sendAuthentication": false
+    }
+  ]
+}
